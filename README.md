@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python main.py --output_dir celebahq_exp --port 12361 --curriculum CelebAHQ
 ```
-Please modify the configuration file ```curriculms.py``` according to your own model and data config. 
+Please modify the configuration file ```curriculums.py```  to adjust to your own dataset path. 
 
 ### Rendering
 ```bash
