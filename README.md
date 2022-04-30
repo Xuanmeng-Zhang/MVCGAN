@@ -7,12 +7,16 @@
 > Xuanmeng Zhang, Zhedong Zheng, Daiheng Gao, Bang Zhang, Pan Pan, Yi Yang <br>
 > CVPR 2022.
 
-Abstract: *3D-aware image synthesis aims to generate images of objects from multiple views by learning a 3D representation. However, one key challenge remains: 
-existing approaches lack geometry constraints, hence usually fail to generate multi-view consistent images. To address this challenge,  we propose  Multi-View Consistent Generative Adversarial Networks (MVCGAN) for high-quality 3D-aware image synthesis with geometry constraints. By leveraging the underlying 3D geometry information of generated images, i.e., depth and camera transformation matrix, we explicitly establish stereo correspondence between views to perform multi-view joint optimization. In particular, we enforce the photometric consistency between pairs of views and integrate a stereo mixup mechanism into the training process, encouraging the model to reason about the correct 3D shape. Besides, we design a two-stage training strategy with feature-level multi-view joint optimization to improve the image quality. Extensive experiments on three datasets demonstrate that MVCGAN achieves the state-of-the-art performance for 3D-aware image synthesis*
+## News:
+- [x] [2022-04-30] We release the [paper](https://arxiv.org/abs/2204.06307), [video](https://drive.google.com/file/d/1D8qwd4wGh4J2nQxin70dJdjCTdE_tr0I/view?usp=sharing), [code](https://github.com/Xuanmeng-Zhang/MVCGAN), and [checkpoints](https://drive.google.com/drive/folders/1XNQQKCxUZAQj7bkMfAJQSNCtHK7oBgy7?usp=sharing). 
+
+
+## Abstract
+*3D-aware image synthesis aims to generate images of objects from multiple views by learning a 3D representation. However, one key challenge remains: 
+existing approaches lack geometry constraints, hence usually fail to generate multi-view consistent images. To address this challenge,  we propose  Multi-View Consistent Generative Adversarial Networks (MVCGAN) for high-quality 3D-aware image synthesis with geometry constraints. By leveraging the underlying 3D geometry information of generated images, i.e., depth and camera transformation matrix, we explicitly establish stereo correspondence between views to perform multi-view joint optimization. In particular, we enforce the photometric consistency between pairs of views and integrate a stereo mixup mechanism into the training process, encouraging the model to reason about the correct 3D shape. Besides, we design a two-stage training strategy with feature-level multi-view joint optimization to improve the image quality. Extensive experiments on three datasets demonstrate that MVCGAN achieves the state-of-the-art performance for 3D-aware image synthesis.*
 
 Please refer to the [supplementary
 video](https://drive.google.com/file/d/1D8qwd4wGh4J2nQxin70dJdjCTdE_tr0I/view?usp=sharing) for more visualization results.
-
 
 ## Getting Started
 ### Installation
@@ -55,7 +59,7 @@ Our implementation of MVCGAN is partly based on the following codebases. We grat
 
 ## Citation
 If you find our code or paper useful, please consider citing:
-```
+```bibtex
 @inproceedings{zhang2022multiview,
   title={Multi-View Consistent Generative Adversarial Networks for 3D-aware Image Synthesis},
   author={Zhang, Xuanmeng and Zheng, Zhedong and Gao, Daiheng and Zhang, Bang and Pan, Pan and Yang, Yi},
