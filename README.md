@@ -21,13 +21,19 @@ Install dependencies by:
 pip install -r requirements.txt
 ```
 
-### Dataset
+### Datasets
 - Download [CelebAHQ](https://github.com/switchablenorms/CelebAMask-HQ)
 
 - Download [FFHQ](https://github.com/NVlabs/ffhq-dataset) 
 
 - Download [AFHQv2](https://github.com/clovaai/stargan-v2)
 
+## Pretrained Checkpoints
+| Dataset   | Resolution |                           Download                           |
+| :-------- | :--------: |  :----------------------------------------------------------: |
+| CelebAHQ  |    512     |  [Google Drive](https://drive.google.com/drive/folders/1vFn82ZVu_kJGPXcYEXwQHWCxTg-pF7JS?usp=sharing) |
+| FFHQ      |    512     |  [Google Drive](https://drive.google.com/drive/folders/11mJlpq2Gecrk6bCSqsezjerfCwwyTF0m?usp=sharing) |
+| AFHQ      |    512     |  [Google Drive](https://drive.google.com/drive/folders/1hcpQI_ljL832KE4ehGhm5e-xwOsI25Yo?usp=sharing) |
 
 ## Training
 ```bash
@@ -39,9 +45,6 @@ Please modify the configuration file ```curriculms.py``` according to your own m
 ```bash
 CUDA_VISIBLE_DEVICES=0 python render_multiview_image.py --path ${CHECKPOINT_PATH} --output_dir render_dir --output_size 512 --curriculum FFHQ
 ```
-
-
-
 
 
 ## Acknowledgment
