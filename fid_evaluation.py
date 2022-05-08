@@ -30,10 +30,10 @@ def setup_evaluation(dataset_name, generated_dir, save_dir, dataset_path, target
     if not os.path.exists(real_dir):
         os.makedirs(real_dir)
         
-        dataloader, CHANNELS = datasets.get_dataset(dataset_name, output_size=target_size, dataset_path=dataset_path)
-        print('outputting real images...')
-        output_real_images(dataloader, num_imgs, real_dir)
-        print('...done')
+    dataloader, CHANNELS = datasets.get_dataset(dataset_name, output_size=target_size, dataset_path=dataset_path)
+    print('outputting real images...')
+    output_real_images(dataloader, num_imgs, real_dir)
+    print('...done')
 
     if generated_dir is not None:
         os.makedirs(generated_dir, exist_ok=True)
