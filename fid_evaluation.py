@@ -74,8 +74,8 @@ def output_images(alpha, generator, input_metadata, rank, world_size, output_dir
                 if rank == 0: pbar.update(world_size)
     if rank == 0: pbar.close()
     
-def calculate_fid(dataset_name, generated_dir, target_size=256):
-    real_dir = os.path.join('EvalImages', dataset_name + '_real_images_' + str(target_size))
+def calculate_fid(dataset_name, generated_dir, real_dir, target_size=256):
+    # real_dir = os.path.join('EvalImages', dataset_name + '_real_images_' + str(target_size))
     fid = fid_score.calculate_fid_given_paths([real_dir, generated_dir], 128, 'cuda', 2048)
     torch.cuda.empty_cache()
 
