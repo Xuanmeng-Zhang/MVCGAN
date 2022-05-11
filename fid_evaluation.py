@@ -25,7 +25,6 @@ def output_real_images(dataloader, num_imgs, real_dir):
             img_counter += 1
 
 def setup_evaluation(dataset_name, generated_dir, save_dir, dataset_path, target_size=128, num_imgs=8000):
-    # Only make real images if they haven't been made yet
     real_dir = os.path.join(save_dir, 'EvalImages', dataset_name + '_real_images_' + str(target_size))
     if not os.path.exists(real_dir):
         os.makedirs(real_dir)
@@ -38,6 +37,11 @@ def setup_evaluation(dataset_name, generated_dir, save_dir, dataset_path, target
     if generated_dir is not None:
         os.makedirs(generated_dir, exist_ok=True)
     return real_dir
+
+def calculate_fid(dataset_name, generated_dir, target_size=256):
+    real_dir = os.path.join('EvalImages', dataset_name + '_real_images_' + str(target_size))
+    fid = fid_score.calculate_fid_given_paths([real_dir, generated_dir], 128, 'cuda', 2048)
+    torch.cuda.empty_cache()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
